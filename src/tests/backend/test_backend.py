@@ -6,6 +6,10 @@ from unittest import mock
 from backend.backend import Backend
 from devices import setup_file
 
+from devices.setup_file import SetupFile
+
+from backend import backend
+
 
 class TestBackend:
     def setup_method(self):
@@ -17,11 +21,36 @@ class TestBackend:
         os.remove("setup.json")  # delete setup file
         subprocess.Popen(["venv/bin/crossbar", "stop"])  # close websocket
 
-    def test_run_backend(self):
+    def test_get_backend(self):
+        """
+        calling the getter method of the class should return a Backend instance
+        """
         with mock.patch("devices.kpro.kpro.Kpro.__init__") as m___init__:
             m___init__.return_value = (
                 None  # mocking kpro device since for tests is not available
             )
-            b = Backend.get()
+            backend = Backend.get()
 
-        assert type(b) == Backend
+        assert type(backend) == Backend
+
+    def test_rpc_setup(self):
+        """
+        remote procedure call setup() should return the json setup loaded.
+        """
+        setup_file = SetupFile()
+
+        with mock.patch("devices.setup_file.SetupFile.load_setup") as m_load_setup:
+            json = backend.setup()
+            assert m_load_setup.called is True
+            assert setup_file.load_setup() == json
+
+    def test_rpc_reset(self):
+        """
+        """
+
+        with mock.patch("devices.setup_file.SetupFile.reset_setup") as m_reset_setup,\
+                mock.patch("autobahn_sync.publish", side_effect=None) as m_publish:
+            m_publish.return_value=None
+            backend.reset()
+            assert m_reset_setup.called is True
+            assert m_publish.assert_called_with(None)
