@@ -17,6 +17,7 @@ FORMULAS = [
     "mr2_w20_fuel_tank",
     "mr2_w30_fuel_tank",
     "mx5_na_fuel_tank",
+    "custom",
 ]
 FORMULA_VS_UNITS = {
     "autometer_2246": PRESSURE_UNITS,
@@ -30,6 +31,7 @@ FORMULA_VS_UNITS = {
     "mr2_w20_fuel_tank": PER_CENT_UNITS,
     "mr2_w30_fuel_tank": PER_CENT_UNITS,
     "mx5_na_fuel_tank": PER_CENT_UNITS,
+    "custom": TEMP_UNITS + PRESSURE_UNITS + PER_CENT_UNITS,
 }
 TAGS = [
     "not use",

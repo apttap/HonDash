@@ -1,7 +1,7 @@
 {
   "an0": {
     "decimals": 0,
-    "formula": "civic_eg_fuel_tank",
+    "formula": "custom",
     "label": "",
     "max": 100,
     "sectors": [
@@ -13,7 +13,11 @@
     ],
     "suffix": "%",
     "tag": "bar2",
-    "unit": "per cent"
+    "unit": "per cent",
+    "min_voltage": 3.313,
+    "max_voltage": 0.172,
+    "min_value": 0,
+    "max_value": 100
   },
   "an1": {
     "decimals": 0,
@@ -23,7 +27,11 @@
     "sectors": [],
     "suffix": "",
     "tag": "not use",
-    "unit": "celsius"
+    "unit": "celsius",
+    "min_voltage": 0.0,
+    "max_voltage": 0.0,
+    "min_value": 0.0,
+    "max_value": 0.0
   },
   "an2": {
     "decimals": 0,
@@ -33,7 +41,11 @@
     "sectors": [],
     "suffix": "",
     "tag": "not use",
-    "unit": "celsius"
+    "unit": "celsius",
+    "min_voltage": 0.0,
+    "max_voltage": 0.0,
+    "min_value": 0.0,
+    "max_value": 0.0
   },
   "an3": {
     "decimals": 1,
@@ -43,7 +55,11 @@
     "sectors": [],
     "suffix": "",
     "tag": "not use",
-    "unit": "celsius"
+    "unit": "celsius",
+    "min_voltage": 0.0,
+    "max_voltage": 0.0,
+    "min_value": 0.0,
+    "max_value": 0.0
   },
   "an4": {
     "decimals": 0,
@@ -53,7 +69,11 @@
     "sectors": [],
     "suffix": "",
     "tag": "not use",
-    "unit": "celsius"
+    "unit": "celsius",
+    "min_voltage": 0.0,
+    "max_voltage": 0.0,
+    "min_value": 0.0,
+    "max_value": 0.0
   },
   "an5": {
     "decimals": 0,
@@ -63,7 +83,11 @@
     "sectors": [],
     "suffix": "",
     "tag": "not use",
-    "unit": "celsius"
+    "unit": "celsius",
+    "min_voltage": 0.0,
+    "max_voltage": 0.0,
+    "min_value": 0.0,
+    "max_value": 0.0
   },
   "an6": {
     "decimals": 0,
@@ -73,7 +97,11 @@
     "sectors": [],
     "suffix": "",
     "tag": "not use",
-    "unit": "celsius"
+    "unit": "celsius",
+    "min_voltage": 0.0,
+    "max_voltage": 0.0,
+    "min_value": 0.0,
+    "max_value": 0.0
   },
   "an7": {
     "decimals": 0,
@@ -83,7 +111,11 @@
     "sectors": [],
     "suffix": "",
     "tag": "not use",
-    "unit": "celsius"
+    "unit": "celsius",
+    "min_voltage": 0.0,
+    "max_voltage": 0.0,
+    "min_value": 0.0,
+    "max_value": 0.0
   },
   "bat": {
     "decimals": 1,
